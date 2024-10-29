@@ -13,7 +13,15 @@ RUN pip install ipykernel jupyter && \
     pip install matplotlib && \
     pip install feature-engine && \
     pip install pandas && \
-    pip install streamsync[ds]
+    pip install streamsync[ds] && \
+    pip install tqdm && \
+    pip install tensorflow && \
+    pip install xgboost && \
+    pip install lightgbm && \
+    pip install fastapi && \
+    pip install uvicorn && \
+    pip install pillow && \
+    pip install python-multipart 
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
