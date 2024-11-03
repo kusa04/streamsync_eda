@@ -1,5 +1,4 @@
-# devcontainer
-仮想環境お手軽キット
+# streamsync_eda
+kaggleでEDAする用のWEBアプリ（未完）
 
-このファイルは開発する時に利用できるdockerの仮想環境です。
-[devcontainer]という名前は変更して好き好きに使ってくだせえ
+
