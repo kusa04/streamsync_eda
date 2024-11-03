@@ -44,7 +44,7 @@
                 "note": "+Pass"
             },
             "isCodeManaged": false,
-            "position": 2,
+            "position": 1,
             "parentId": "9ci3eemshm0xgj3j",
             "handlers": {},
             "visible": true
@@ -59,19 +59,17 @@
             "isCodeManaged": false,
             "position": 0,
             "parentId": "9ci3eemshm0xgj3j",
-            "handlers": {},
-            "visible": true,
-            "binding": {
-                "eventType": "ss-file-change",
-                "stateRef": "@{install_csv}"
-            }
+            "handlers": {
+                "ss-file-change": "load_csv_file"
+            },
+            "visible": true
         },
         "4asdqnlk01qu44bi": {
             "id": "4asdqnlk01qu44bi",
             "type": "separator",
             "content": {},
             "isCodeManaged": false,
-            "position": 3,
+            "position": 2,
             "parentId": "9ci3eemshm0xgj3j",
             "handlers": {},
             "visible": true
@@ -90,13 +88,14 @@
             "id": "y9haa1q5tlwq7863",
             "type": "tab",
             "content": {
-                "name": "DataFrame"
+                "name": "DataFrame",
+                "contentPadding": "30px",
+                "cssClasses": ""
             },
             "isCodeManaged": false,
             "position": 0,
             "parentId": "umih0w7ggag5ajnd",
-            "handlers": {},
-            "visible": true
+            "handlers": {}
         },
         "s0ypenetkjy1anzg": {
             "id": "s0ypenetkjy1anzg",
@@ -125,32 +124,12 @@
         "aaljoz46cq7ocmr9": {
             "id": "aaljoz46cq7ocmr9",
             "type": "plotlygraph",
-            "content": {},
-            "isCodeManaged": false,
-            "position": 0,
-            "parentId": "4bfwpzx5biq0junj",
-            "handlers": {},
-            "visible": true
-        },
-        "9frku5jkb8xow1np": {
-            "id": "9frku5jkb8xow1np",
-            "type": "columns",
-            "content": {},
-            "isCodeManaged": false,
-            "position": 1,
-            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
-            "handlers": {},
-            "visible": true
-        },
-        "nqfqnvra3hv2u69j": {
-            "id": "nqfqnvra3hv2u69j",
-            "type": "column",
             "content": {
-                "width": "1"
+                "spec": "@{scatter}"
             },
             "isCodeManaged": false,
-            "position": 0,
-            "parentId": "9frku5jkb8xow1np",
+            "position": 1,
+            "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
         },
@@ -159,7 +138,7 @@
             "type": "plotlygraph",
             "content": {},
             "isCodeManaged": false,
-            "position": 1,
+            "position": 2,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
@@ -169,25 +148,22 @@
             "type": "plotlygraph",
             "content": {},
             "isCodeManaged": false,
-            "position": 2,
+            "position": 3,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
         },
-        "1zw6wlmfer6d7ctz": {
-            "id": "1zw6wlmfer6d7ctz",
-            "type": "selectinput",
+        "o1pny91das69f6tu": {
+            "id": "o1pny91das69f6tu",
+            "type": "multiselectinput",
             "content": {
-                "label": "Input Label",
-                "options": "{\n  \"covid_flu.csv\": \"covid_flu.csv\"\n}",
-                "maximumCount": "1"
+                "label": "",
+                "options": "@{numeric}\n",
+                "placeholder": "Select Two Variables..."
             },
             "isCodeManaged": false,
-            "position": 1,
-            "parentId": "9ci3eemshm0xgj3j",
-            "handlers": {
-                "ss-option-change": "select_csv"
-            },
+            "position": 0,
+            "parentId": "4bfwpzx5biq0junj",
             "visible": true
         }
     }

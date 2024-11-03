@@ -1,31 +1,55 @@
 import streamsync as ss
 import plotly.express as px
 import pandas as pd
+import numpy as np
+import os
+import io
 
-# TODO: file読み込みからdfを表示できるようにする
 #  TODO: 動的にグラフの描画
-
-def select_csv(state, payload):
-    state["csv_name"] = payload
-    print(f"csv_name: {state['csv_name']}")
-    state["df"] = pd.read_csv(f"static/{state['csv_name']}")
-    df = state["df"]
+      
+# 選択したファイルをstate["df"]に格納する関数     
+def load_csv_file(state, payload):
+    # リストの最初の要素からファイルデータを取得
+    uploaded_file = payload[0]
+    file_data = uploaded_file.get("data")  # ファイルデータ（バイナリ形式）
     
-def onchange_handler(state, payload):
+    # バイナリデータをバッファとして扱う
+    file_buffer = io.BytesIO(file_data)
+    
+    # pd.read_csvでバッファから読み込む
+    state["df"] = pd.read_csv(file_buffer)
+    df = state["df"]
+    print(df.head())
+    # state["numeric"] = df.select_dtypes(include=[np.number])
+    # state["category"]
 
-	# Set the state variable "selected" to the selected option
-
-	state["selected"] = payload
 
 
-df = "/static/covid_flu.csv"
+
+# 散布図描画
+def scatter_plot(state, payload):
+    var1, var2 = payload
+
+
+
+
+
+############# 各値の初期化 #############
+
+df = pd.read_csv("static/covid_flu.csv")
+scatter = px.scatter(x=df.loc[:, "Age"], y=df.loc[:, "Temperature"], \
+                     color=df.loc[:, "Sex"], labels={
+                         "x": "Age",
+                         "y": "Temperature"
+                     })
+
 
 
 initial_state = ss.init_state({
 
-    "initial_csv": pd.read_csv("static/covid_flu.csv"),
     "df": df,
-    "csv_name": ""
+    "scatter": scatter,
+    "numeric": None,
 
 })
 
