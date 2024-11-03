@@ -1,0 +1,194 @@
+{
+    "metadata": {
+        "streamsync_version": "0.5.0"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "emptinessColor": "#e9eef1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "root",
+            "handlers": {},
+            "visible": true
+        },
+        "9ci3eemshm0xgj3j": {
+            "id": "9ci3eemshm0xgj3j",
+            "type": "sidebar",
+            "content": {},
+            "isCodeManaged": false,
+            "position": -2,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {},
+            "visible": true
+        },
+        "j6r3xhizlbbvtkos": {
+            "id": "j6r3xhizlbbvtkos",
+            "type": "metric",
+            "content": {
+                "note": "+Pass"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "9ci3eemshm0xgj3j",
+            "handlers": {},
+            "visible": true
+        },
+        "f8dq75rmi11mdcf4": {
+            "id": "f8dq75rmi11mdcf4",
+            "type": "fileinput",
+            "content": {
+                "label": "Select csv file",
+                "allowMultipleFiles": "no"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "9ci3eemshm0xgj3j",
+            "handlers": {},
+            "visible": true,
+            "binding": {
+                "eventType": "ss-file-change",
+                "stateRef": "@{install_csv}"
+            }
+        },
+        "4asdqnlk01qu44bi": {
+            "id": "4asdqnlk01qu44bi",
+            "type": "separator",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "9ci3eemshm0xgj3j",
+            "handlers": {},
+            "visible": true
+        },
+        "umih0w7ggag5ajnd": {
+            "id": "umih0w7ggag5ajnd",
+            "type": "tabs",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {},
+            "visible": true
+        },
+        "y9haa1q5tlwq7863": {
+            "id": "y9haa1q5tlwq7863",
+            "type": "tab",
+            "content": {
+                "name": "DataFrame"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "umih0w7ggag5ajnd",
+            "handlers": {},
+            "visible": true
+        },
+        "s0ypenetkjy1anzg": {
+            "id": "s0ypenetkjy1anzg",
+            "type": "dataframe",
+            "content": {
+                "dataframe": "@{df}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "y9haa1q5tlwq7863",
+            "handlers": {},
+            "visible": true
+        },
+        "4bfwpzx5biq0junj": {
+            "id": "4bfwpzx5biq0junj",
+            "type": "tab",
+            "content": {
+                "name": "Graph"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "umih0w7ggag5ajnd",
+            "handlers": {},
+            "visible": true
+        },
+        "aaljoz46cq7ocmr9": {
+            "id": "aaljoz46cq7ocmr9",
+            "type": "plotlygraph",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "4bfwpzx5biq0junj",
+            "handlers": {},
+            "visible": true
+        },
+        "9frku5jkb8xow1np": {
+            "id": "9frku5jkb8xow1np",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {},
+            "visible": true
+        },
+        "nqfqnvra3hv2u69j": {
+            "id": "nqfqnvra3hv2u69j",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "9frku5jkb8xow1np",
+            "handlers": {},
+            "visible": true
+        },
+        "in6wi58926ptptfb": {
+            "id": "in6wi58926ptptfb",
+            "type": "plotlygraph",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "4bfwpzx5biq0junj",
+            "handlers": {},
+            "visible": true
+        },
+        "w3yudkorpfb7ctde": {
+            "id": "w3yudkorpfb7ctde",
+            "type": "plotlygraph",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "4bfwpzx5biq0junj",
+            "handlers": {},
+            "visible": true
+        },
+        "1zw6wlmfer6d7ctz": {
+            "id": "1zw6wlmfer6d7ctz",
+            "type": "selectinput",
+            "content": {
+                "label": "Input Label",
+                "options": "{\n  \"covid_flu.csv\": \"covid_flu.csv\"\n}",
+                "maximumCount": "1"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "9ci3eemshm0xgj3j",
+            "handlers": {
+                "ss-option-change": "select_csv"
+            },
+            "visible": true
+        }
+    }
+}
