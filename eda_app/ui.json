@@ -37,18 +37,6 @@
             "handlers": {},
             "visible": true
         },
-        "j6r3xhizlbbvtkos": {
-            "id": "j6r3xhizlbbvtkos",
-            "type": "metric",
-            "content": {
-                "note": "+Pass"
-            },
-            "isCodeManaged": false,
-            "position": 1,
-            "parentId": "9ci3eemshm0xgj3j",
-            "handlers": {},
-            "visible": true
-        },
         "f8dq75rmi11mdcf4": {
             "id": "f8dq75rmi11mdcf4",
             "type": "fileinput",
@@ -69,7 +57,7 @@
             "type": "separator",
             "content": {},
             "isCodeManaged": false,
-            "position": 2,
+            "position": 1,
             "parentId": "9ci3eemshm0xgj3j",
             "handlers": {},
             "visible": true
@@ -128,7 +116,7 @@
                 "spec": "@{scatter}"
             },
             "isCodeManaged": false,
-            "position": 1,
+            "position": 2,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
@@ -136,9 +124,11 @@
         "in6wi58926ptptfb": {
             "id": "in6wi58926ptptfb",
             "type": "plotlygraph",
-            "content": {},
+            "content": {
+                "spec": "@{myvar1}"
+            },
             "isCodeManaged": false,
-            "position": 2,
+            "position": 3,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
@@ -146,9 +136,11 @@
         "w3yudkorpfb7ctde": {
             "id": "w3yudkorpfb7ctde",
             "type": "plotlygraph",
-            "content": {},
+            "content": {
+                "spec": "@{myvar2}"
+            },
             "isCodeManaged": false,
-            "position": 3,
+            "position": 4,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
@@ -165,6 +157,18 @@
             "position": 0,
             "parentId": "4bfwpzx5biq0junj",
             "visible": true
+        },
+        "yivn2uyrxj0chqva": {
+            "id": "yivn2uyrxj0chqva",
+            "type": "chatbot",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "4bfwpzx5biq0junj",
+            "handlers": {
+                "ss-chatbot-message": "chatbot",
+                "ss-chatbot-action-click": "handle_vars_in_chatbot"
+            }
         }
     }
 }
