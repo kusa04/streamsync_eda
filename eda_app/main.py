@@ -5,9 +5,13 @@ import numpy as np
 import os
 import io
 
+
+# type stramsync edit eda_app
+
 #  TODO: ファイルを選択→散布図の描画→keyerrorが発生する
 # TODO: chatからmyvar２つを抽出するもっといい方法？？
 # TODO: 別の変数の組み合わせを選ぶ時に毎回 "num" を打つのは煩わしい
+# TODO: colorで色分けしたいなあ
       
 # 選択したファイルをstate["df"]に格納する関数     
 def load_csv_file(state, payload):

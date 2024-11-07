@@ -116,7 +116,7 @@
                 "spec": "@{scatter}"
             },
             "isCodeManaged": false,
-            "position": 2,
+            "position": 1,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
@@ -128,7 +128,7 @@
                 "spec": "@{myvar1}"
             },
             "isCodeManaged": false,
-            "position": 3,
+            "position": 2,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
             "visible": true
@@ -140,22 +140,9 @@
                 "spec": "@{myvar2}"
             },
             "isCodeManaged": false,
-            "position": 4,
+            "position": 3,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {},
-            "visible": true
-        },
-        "o1pny91das69f6tu": {
-            "id": "o1pny91das69f6tu",
-            "type": "multiselectinput",
-            "content": {
-                "label": "",
-                "options": "@{numeric}\n",
-                "placeholder": "Select Two Variables..."
-            },
-            "isCodeManaged": false,
-            "position": 0,
-            "parentId": "4bfwpzx5biq0junj",
             "visible": true
         },
         "yivn2uyrxj0chqva": {
@@ -163,7 +150,7 @@
             "type": "chatbot",
             "content": {},
             "isCodeManaged": false,
-            "position": 1,
+            "position": 0,
             "parentId": "4bfwpzx5biq0junj",
             "handlers": {
                 "ss-chatbot-message": "chatbot",
